@@ -2,26 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --brand: 25 30% 90%;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: system-ui, sans-serif;
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: theme('colors.ink.900');
+  background: theme('colors.dawn.50');
+  overflow-x: hidden;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer components {
+  .display-1 {
+    @apply font-display text-6xl tracking-tight leading-none;
   }
+
+  .display-2 {
+    @apply font-display text-4xl tracking-tight leading-tight;
+  }
+
+  .cta-pill {
+    @apply text-xs uppercase tracking-wide font-medium bg-ink-900 text-dawn-50 px-4 py-2 rounded-full;
+  }
+
+  .ring-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    pointer-events: none;
+  }
+
+  .ring-canvas-interactive {
+    pointer-events: auto;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: theme('colors.dawn.50');
+}
+::-webkit-scrollbar-thumb {
+  background: theme('colors.pewter.200');
+  border-radius: 4px;
 }
