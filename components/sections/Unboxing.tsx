@@ -5,7 +5,7 @@ export default function Unboxing() {
         
         <div className="col-span-12 md:col-span-6 relative aspect-square rounded-[40px] overflow-hidden bg-ink-800">
           <img 
-            src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=800" 
+            src="/box.png" 
             alt="AURA Ring 2 Box" 
             className="absolute inset-0 w-full h-full object-cover opacity-80"
           />
