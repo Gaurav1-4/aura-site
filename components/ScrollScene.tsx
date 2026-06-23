@@ -13,7 +13,7 @@ const BASE = 0.40;
 const HERO_Y = -0.055;
 
 const POSES = {
-  HERO_POSE:   { px: 1.2,  py: 0,      pz: 0, rx: 0,            ry: 0,            rz: 0,            scale: BASE * 1.1 },
+  HERO_POSE:   { px: 0,    py: 0,      pz: 0, rx: 0,            ry: 0,            rz: 0,            scale: BASE * 1.1 },
   about:       { px: +4.0, py: 0,      pz: 0, rx: Math.PI / 4,  ry: Math.PI,      rz: Math.PI / 6,  scale: BASE * 1.4 },
   benefits:    { px: -3.0, py: 0,      pz: 0, rx: -Math.PI / 6, ry: Math.PI * 2,  rz: -Math.PI / 4, scale: BASE * 1.5 },
   app:         { px: +0.6, py: 0.5,    pz: -1, rx: Math.PI / 8, ry: Math.PI * 3,  rz: Math.PI / 8,  scale: BASE * 1.0 },
