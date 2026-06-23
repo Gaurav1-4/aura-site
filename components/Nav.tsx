@@ -37,10 +37,10 @@ export default function Nav() {
               <NavigationMenuTrigger>Technology</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <div className="grid grid-cols-2 gap-3 p-4 w-[400px]">
-                  <NavDropdownLink icon={<Cpu />} title="Sensors" desc="Nano-precision tracking." href="/technology" />
-                  <NavDropdownLink icon={<Battery />} title="Battery" desc="7 days on one charge." href="/technology" />
-                  <NavDropdownLink icon={<Activity />} title="Materials" desc="Titanium & resin." href="/technology" />
-                  <NavDropdownLink icon={<Shield />} title="Durability" desc="Waterproof to 100m." href="/technology" />
+                  <NavDropdownLink icon={<Cpu />} title="Sensors" desc="Nano-precision tracking." href="#benefits" />
+                  <NavDropdownLink icon={<Battery />} title="Battery" desc="7 days on one charge." href="#benefits" />
+                  <NavDropdownLink icon={<Activity />} title="Materials" desc="Titanium & resin." href="#benefits" />
+                  <NavDropdownLink icon={<Shield />} title="Durability" desc="Waterproof to 100m." href="#benefits" />
                 </div>
               </NavigationMenuContent>
             </NavigationMenuItem>
@@ -49,8 +49,8 @@ export default function Nav() {
               <NavigationMenuTrigger>About</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <div className="grid grid-cols-2 gap-3 p-4 w-[400px]">
-                  <NavDropdownLink icon={<Info />} title="Our Story" desc="Why we built AURA." href="/about" />
-                  <NavDropdownLink icon={<Users />} title="Founders" desc="Meet the team." href="/about" />
+                  <NavDropdownLink icon={<Info />} title="Our Story" desc="Why we built AURA." href="#about" />
+                  <NavDropdownLink icon={<Users />} title="Founders" desc="Meet the team." href="#about" />
                 </div>
               </NavigationMenuContent>
             </NavigationMenuItem>
@@ -59,15 +59,17 @@ export default function Nav() {
               <NavigationMenuTrigger>Subscription</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <div className="grid grid-cols-2 gap-3 p-4 w-[400px]">
-                  <NavDropdownLink icon={<Activity />} title="Tiers" desc="Basic, Pro, Lifetime." href="/subscription" />
-                  <NavDropdownLink icon={<HelpCircle />} title="FAQ" desc="Common questions." href="/subscription" />
+                  <NavDropdownLink icon={<Activity />} title="Tiers" desc="Basic, Pro, Lifetime." href="#buy" />
+                  <NavDropdownLink icon={<HelpCircle />} title="FAQ" desc="Common questions." href="#buy" />
                 </div>
               </NavigationMenuContent>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
 
-        <GlassButton size="sm">Buy AURA</GlassButton>
+        <a href="#buy">
+          <GlassButton size="sm">Buy AURA</GlassButton>
+        </a>
         </div>
       </LiquidGlassCard>
     </div>

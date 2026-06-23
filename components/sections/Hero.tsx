@@ -42,7 +42,9 @@ export default function Hero() {
             </p>
 
             <div className="flex items-center gap-6">
-              <GlassButton size="lg">Explore AURA</GlassButton>
+              <a href="#about">
+                <GlassButton size="lg">Explore AURA</GlassButton>
+              </a>
               <a href="#about" className="text-sm font-medium hover:opacity-70 transition-opacity">
                 Watch the film
               </a>
