@@ -1,24 +1,27 @@
 export default function CompanionApp() {
   return (
-    <section id="app" className="relative min-h-screen py-32 bg-dawn-50 z-20 flex items-center">
-      <div className="max-w-7xl mx-auto px-8 w-full grid grid-cols-12 gap-12 items-center">
+    <section id="app" className="relative min-h-screen py-32 bg-ink-900 z-20 flex items-center overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/10 blur-[120px] rounded-full pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-8 w-full grid grid-cols-12 gap-12 items-center relative z-10">
         
         <div className="col-span-12 md:col-span-5">
-          <h2 className="display-2 mb-6 text-ink-900">Data without friction.</h2>
-          <p className="text-lg text-pewter-500 leading-relaxed mb-16 max-w-sm">
+          <h2 className="display-2 mb-6 text-dawn-50">Data without friction.</h2>
+          <p className="text-lg text-pewter-400 leading-relaxed mb-16 max-w-sm">
             AURA's companion app translates millions of microscopic data points into clear, actionable insights. No confusing charts, just what your body needs today.
           </p>
           
-          <div className="grid grid-cols-2 border-t border-l border-pewter-200/50">
+          <div className="grid grid-cols-2 gap-4">
             {[
-              { label: 'Readiness', val: '92' },
-              { label: 'Sleep Score', val: '88' },
-              { label: 'Activity', val: 'Goal Met' },
-              { label: 'Stress', val: 'Low' },
+              { label: 'Readiness', val: '92', color: 'text-blue-400' },
+              { label: 'Sleep Score', val: '88', color: 'text-purple-400' },
+              { label: 'Activity', val: 'Goal Met', color: 'text-green-400' },
+              { label: 'Stress', val: 'Low', color: 'text-orange-400' },
             ].map((stat, i) => (
-              <div key={i} className="border-b border-r border-pewter-200/50 p-6 flex flex-col justify-center min-h-[140px]">
+              <div key={i} className="bg-white/5 border border-white/10 rounded-3xl p-6 flex flex-col justify-center min-h-[140px] hover:bg-white/10 transition-colors backdrop-blur-md">
                 <div className="text-xs uppercase tracking-widest text-pewter-400 mb-2">{stat.label}</div>
-                <div className="font-display text-4xl text-ink-900">{stat.val}</div>
+                <div className={`font-display text-4xl ${stat.color}`}>{stat.val}</div>
               </div>
             ))}
           </div>
@@ -26,7 +29,7 @@ export default function CompanionApp() {
 
         <div className="col-span-12 md:col-span-7 flex justify-end md:pr-12 relative pointer-events-none">
           {/* App Screen Mockup */}
-          <div className="w-[320px] h-[650px] bg-ink-900 rounded-[48px] p-4 shadow-2xl border-4 border-ink-800 relative overflow-hidden">
+          <div className="w-[320px] h-[650px] bg-ink-900 rounded-[48px] p-4 shadow-[0_0_80px_rgba(59,130,246,0.15)] ring-1 ring-white/10 relative overflow-hidden">
             <div className="absolute top-0 inset-x-0 h-6 bg-ink-900 z-20 flex justify-center items-end pb-1">
               {/* Dynamic Island fake */}
               <div className="w-24 h-5 bg-black rounded-full" />
